@@ -2,6 +2,7 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 
 import optimizationRouteArr from './module/optimization';
+import questionRouteArr from './module/question';
 
 Vue.use(VueRouter);
 
@@ -11,7 +12,8 @@ const routes = [
     name: "Home",
     component: () => import('../Layout/index.vue'),
     children: [
-      ...optimizationRouteArr
+      ...optimizationRouteArr,
+      ...questionRouteArr
     ]
   }
 ];
